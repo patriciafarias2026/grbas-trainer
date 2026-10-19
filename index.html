@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRBAS Trainer — Start here</title>
+<style>
+  :root{
+    --bg-deep:#0F1A1D; --bg-panel:#16262A; --bg-panel-2:#1C2E32; --bg-panel-3:#223639;
+    --ink:#E7EEEC; --ink-muted:#8FA6A3; --ink-dim:#5E7674;
+    --line: rgba(231,238,236,0.10); --line-strong: rgba(231,238,236,0.20);
+    --cyan:#4FD1C5; --amber:#F2A65A;
+    --font-display: 'Space Grotesk','Avenir Next','Segoe UI',sans-serif;
+    --font-body: 'Inter','Segoe UI',system-ui,sans-serif;
+    --font-mono: 'JetBrains Mono','SFMono-Regular',Consolas,monospace;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg-deep);color:var(--ink);font-family:var(--font-body);min-height:100vh;}
+  .wrap{max-width:760px;margin:0 auto;padding:70px 24px 60px;}
+  .mark{display:flex;align-items:center;gap:14px;margin-bottom:34px;}
+  .mark svg{flex:none;}
+  h1{font-family:var(--font-display);font-size:30px;font-weight:600;margin:0;letter-spacing:.01em;}
+  .tag{font-family:var(--font-mono);font-size:13px;color:var(--ink-muted);margin-top:4px;}
+  p.lead{font-size:16px;line-height:1.7;color:var(--ink);margin:26px 0;}
+  .credit{font-family:var(--font-mono);font-size:12.5px;color:var(--ink-muted);line-height:1.8;margin-bottom:36px;}
+  .credit b{color:var(--cyan);}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:30px 0 40px;}
+  @media (max-width:600px){.cards{grid-template-columns:1fr;}}
+  a.card{
+    display:block;text-decoration:none;background:var(--bg-panel);border:1px solid var(--line-strong);
+    border-radius:12px;padding:26px 22px;transition:border-color .15s ease, transform .15s ease;
+  }
+  a.card:hover{border-color:var(--cyan);transform:translateY(-2px);}
+  .card .flag{font-family:var(--font-mono);font-size:11px;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.08em;}
+  .card .title{font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--ink);margin-top:8px;}
+  .card .sub{font-size:13px;color:var(--ink-muted);margin-top:8px;line-height:1.5;}
+  .card .arrow{font-family:var(--font-mono);color:var(--cyan);margin-top:16px;font-size:13px;}
+  ul.features{padding-left:20px;color:var(--ink-muted);font-size:14.5px;line-height:1.9;}
+  ul.features li::marker{color:var(--cyan);}
+  .foot{margin-top:50px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--font-mono);font-size:11.5px;color:var(--ink-dim);line-height:1.8;}
+  .foot a{color:var(--ink-muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mark">
+    <svg width="46" height="32" viewBox="0 0 46 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 16 L6 16 L9 6 L13 26 L17 11 L20 21 L23 16 L27 16 L30 4 L34 28 L37 16 L45 16"
+        stroke="#4FD1C5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <div>
+      <h1>GRBAS Trainer</h1>
+      <div class="tag">296 voices · perceptual calibration vs. consensus</div>
+    </div>
+  </div>
+
+  <p class="lead">
+    An interactive training tool built on the Perceptual Voice Qualities Database (PVQD).
+    Rate any of the 296 voices on Grade, Roughness, Breathiness, Asthenia and Strain, compare
+    your ratings against the dataset consensus, and track your calibration over time —
+    with weighted kappa, per-parameter error, and a training-evolution chart.
+  </p>
+
+  <div class="credit">
+    Concept and clinical direction: <b>Dr. Patricia G. Farías</b>, Speech-Language Pathologist — Vocology Specialist, Buenos Aires, Argentina.<br>
+    Built with the assistance of Claude (Anthropic).
+  </div>
+
+  <div class="cards">
+    <a class="card" href="grbas_trainer_en.html">
+      <div class="flag">English</div>
+      <div class="title">Open GRBAS Trainer</div>
+      <div class="sub">Full interface in English — voice list, rating panel, and training dashboard.</div>
+      <div class="arrow">Open →</div>
+    </a>
+    <a class="card" href="grbas_trainer.html">
+      <div class="flag">Español</div>
+      <div class="title">Abrir GRBAS Trainer</div>
+      <div class="sub">Interfaz completa en español — listado de voces, panel de calificación y dashboard.</div>
+      <div class="arrow">Abrir →</div>
+    </a>
+  </div>
+
+  <ul class="features">
+    <li>Blind mode — hides the consensus grade and diagnosis until you rate, to avoid biasing perception</li>
+    <li>Per-parameter error, % exact match, and quadratic weighted kappa vs. consensus</li>
+    <li>Agreement against each individual PVQD rater</li>
+    <li>Rolling-window training-evolution chart</li>
+    <li>JSON / CSV export of your ratings</li>
+    <li>Runs entirely client-side — no install, no server, no data leaves your device</li>
+  </ul>
+
+  <div class="foot">
+    <b>How it works:</b> the tool contains the PVQD ratings, but <u>not the audio files</u>. Download the 296 .wav files once from the PVQD page on Mendeley Data (link below, free, CC BY 4.0) and load each voice from your device as you train. Your ratings stay in your browser; nothing is uploaded. Works offline once the page is open.
+    <br><br>
+    <b>Cómo funciona:</b> la herramienta incluye las calificaciones del PVQD, pero <u>no los audios</u>. Descargá una sola vez los 296 archivos .wav desde la página del PVQD en Mendeley Data (enlace abajo, gratis, CC BY 4.0) y cargá cada voz desde tu dispositivo al entrenar. Tus calificaciones quedan en tu navegador; no se sube nada.
+    <br><br>
+    <b>Scope / Alcance:</b> educational training tool, not a clinical diagnostic instrument / herramienta educativa, no diagnóstica.
+    <br><br>
+    User guides: <a href="GRBAS_Trainer_User_Guide.pdf">English (PDF)</a> · <a href="GRBAS_Trainer_Guia_de_uso.pdf">Español (PDF)</a>
+    <br><br>
+    Tool license / Licencia: CC BY-NC 4.0 · Contact / Contacto: <a href="mailto:dra.patricia.farias@gmail.com">dra.patricia.farias@gmail.com</a> · Independent project / Proyecto independiente.
+    <br><br>
+    Data: Walden, P.R. (2020). Perceptual Voice Qualities Database (PVQD), Mendeley Data, V3.
+    <a href="https://doi.org/10.17632/9dz247gnyb.3" target="_blank" rel="noopener">https://doi.org/10.17632/9dz247gnyb.3</a> · CC BY 4.0.
+    <br>
+    Paper: Walden, P.R. (2022). Perceptual Voice Qualities Database (PVQD): Database Characteristics. Journal of Voice, 36(6), 875.e15–875.e23.
+    <a href="https://doi.org/10.1016/j.jvoice.2020.10.001" target="_blank" rel="noopener">https://doi.org/10.1016/j.jvoice.2020.10.001</a>
+  </div>
+</div>
+</body>
+</html>

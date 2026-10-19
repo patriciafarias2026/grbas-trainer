@@ -1,0 +1,6 @@
+GRBAS Trainer (c) 2026 Patricia G. Farías.
+Licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0):
+https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+Third-party: Chart.js 4.4.1, MIT License, (c) 2014-2024 Chart.js Contributors.
+PVQD data: Walden (2020), CC BY 4.0, https://doi.org/10.17632/9dz247gnyb.3
