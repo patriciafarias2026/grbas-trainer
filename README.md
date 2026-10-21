@@ -8,7 +8,7 @@ Perceptual Voice Qualities Database (PVQD, Walden 2020). / Educational auditory-
 - Alcance: uso educativo; no es un instrumento de diagnóstico clínico.
 
 ## Cómo citar / How to cite
-Farías, P.G. (2026). *GRBAS Trainer* (v1.0) [Software]. DOI: (completar tras Zenodo).
+Farías, P.G. (2026). *GRBAS Trainer* (v1.0) [Software]. DOI: https://doi.org/10.5281/zenodo.23549075
 
 ## Datos / Data
 Walden, P.R. (2020). Perceptual Voice Qualities Database (PVQD), Mendeley Data, V3. https://doi.org/10.17632/9dz247gnyb.3 (CC BY 4.0)

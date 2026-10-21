@@ -4,6 +4,7 @@ title: "GRBAS Trainer: herramienta de entrenamiento audioperceptual de la calida
 abstract: "Herramienta educativa web para el entrenamiento audioperceptual de la calidad vocal (escala GRBAS), basada en la Perceptual Voice Qualities Database (PVQD, Walden 2020). Calcula acuerdo con el consenso (kappa ponderado, error por parámetro) y corre íntegramente en el navegador. No es un instrumento de diagnóstico clínico."
 type: software
 version: 1.0.0
+doi: 10.5281/zenodo.23549075
 date-released: 2026-10-19
 license: CC-BY-NC-4.0
 repository-code: "https://github.com/patriciafarias2026/grbas-trainer"
