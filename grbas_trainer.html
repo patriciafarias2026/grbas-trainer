@@ -262,6 +262,15 @@ audio{width:100%;margin-top:12px;}
 .chart-card{background:var(--bg-panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px;}
 .chart-card h4{margin:0 0 12px;font-family:var(--font-mono);font-size:11.5px;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.06em;}
 .chart-card canvas{max-height:260px;}
+.legend{margin-top:14px;background:var(--bg-panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 18px;color:var(--ink-muted);font-size:13px;line-height:1.6;}
+.legend summary{cursor:pointer;color:var(--cyan,#4FD1C5);font-weight:600;}
+.legend dl{margin:12px 0 0;display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;}
+.legend dt{color:var(--ink);font-weight:600;}
+.legend dd{margin:0;}
+.legend p{margin:12px 0 0;color:var(--ink-dim);}
+.guide-tip{margin:0 0 16px;padding:10px 14px;border:1px dashed var(--line);border-radius:var(--radius);color:var(--ink-muted);font-size:13px;line-height:1.5;}
+.guide-tip a{color:var(--cyan,#4FD1C5);}
+@media (max-width:640px){.legend dl{grid-template-columns:1fr;}.legend dd{margin-bottom:6px;}}
 .export-row{display:flex;gap:10px;margin-top:6px;}
 .empty-dash{color:var(--ink-dim);font-family:var(--font-mono);font-size:13px;padding:50px 0;text-align:center;}
 
@@ -292,6 +301,7 @@ audio{width:100%;margin-top:12px;}
 
   <!-- ============ VIEW: VOICES LIST ============ -->
   <div class="view active" id="view-voices">
+    <div class="guide-tip">📘 <b>¿Primera vez?</b> Leé la <a href="GRBAS_Trainer_Guia_de_uso.pdf" target="_blank" rel="noopener">guía de uso (PDF)</a> antes de empezar: explica el modo ciego, cómo cargar los audios y qué significan las estadísticas del Panel.</div>
     <div class="cards" id="summary-cards"></div>
 
     <div class="toolbar">
@@ -825,10 +835,22 @@ function renderDashboard(){
       <h2>Estadísticas por parámetro</h2>
       <div class="tablewrap">
         <table class="stat-table">
-          <thead><tr><th>Parámetro</th><th>N</th><th>% exacto</th><th>% ±1</th><th>EAM</th><th>Kappa ponderado</th><th>Mejor acuerdo evaluador</th></tr></thead>
+          <thead><tr><th>Parámetro</th><th title="Voces que calificaste para este parámetro">N</th><th title="% de voces donde tu puntaje coincide exactamente con el consenso">% exacto</th><th title="% de voces donde tu puntaje coincide o se aleja solo 1 punto del consenso">% ±1</th><th title="Error absoluto medio: cuántos puntos te alejás en promedio del consenso (0 = perfecto)">EAM</th><th title="Acuerdo con el consenso descontando el azar (de −1 a 1; 1 = perfecto)">Kappa ponderado</th><th title="Evaluador de la base con el que más coincidís">Mejor acuerdo evaluador</th></tr></thead>
           <tbody>${rows}</tbody>
         </table>
       </div>
+      <details class="legend" open>
+        <summary>¿Cómo leer esta tabla?</summary>
+        <dl>
+          <dt>N</dt><dd>Cantidad de voces que calificaste para ese parámetro.</dd>
+          <dt>% exacto</dt><dd>En qué porcentaje de las voces tu puntaje coincide exactamente con el consenso. Más alto es mejor.</dd>
+          <dt>% ±1</dt><dd>En qué porcentaje tu puntaje coincide o se aleja solo un punto del consenso. Más alto es mejor.</dd>
+          <dt>EAM</dt><dd>Error absoluto medio: cuántos puntos te alejás, en promedio, del consenso (escala 0–3). 0 es perfecto; más bajo es mejor.</dd>
+          <dt>Kappa ponderado</dt><dd>Acuerdo con el consenso descontando el azar; los desacuerdos grandes pesan más que los chicos. Va de −1 a 1: 1 es acuerdo perfecto, 0 equivale al azar y un valor negativo es peor que el azar.</dd>
+          <dt>Mejor acuerdo evaluador</dt><dd>El evaluador de la base con el que más coincidís exactamente. «Eval. 2 · T1» significa evaluador 2, primera medición (T2 es la segunda).</dd>
+        </dl>
+        <p>El consenso es el promedio de 3 evaluadores, redondeado de 0 a 3. Estos indicadores son para tu práctica: no son una prueba de competencia clínica.</p>
+      </details>
     </div>
 
     <div class="dash-section">
