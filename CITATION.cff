@@ -17,3 +17,21 @@ keywords:
   - auditory-perceptual evaluation
   - training
   - PVQD
+references:
+  - type: book
+    title: "Clinical Examination of Voice"
+    authors:
+      - family-names: "Hirano"
+        given-names: "Minoru"
+    year: 1981
+    publisher:
+      name: "Springer-Verlag"
+      city: "Wien"
+    notes: "Escala GRBAS / GRBAS scale. Disorders of Human Communication, vol. 5."
+  - type: dataset
+    title: "Perceptual Voice Qualities Database (PVQD)"
+    authors:
+      - family-names: "Walden"
+        given-names: "Patrick R."
+    year: 2020
+    doi: "10.17632/9dz247gnyb.3"
