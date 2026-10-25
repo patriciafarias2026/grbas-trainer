@@ -1,11 +1,11 @@
 cff-version: 1.2.0
 message: "Si usás esta herramienta, por favor citala como se indica. / If you use this tool, please cite it as below."
 title: "GRBAS Trainer: herramienta de entrenamiento audioperceptual de la calidad vocal"
-abstract: "Herramienta educativa web para el entrenamiento audioperceptual de la calidad vocal (escala GRBAS), basada en la Perceptual Voice Qualities Database (PVQD, Walden 2020). Calcula acuerdo con el consenso (kappa ponderado, error por parámetro) y corre íntegramente en el navegador. No es un instrumento de diagnóstico clínico."
+abstract: "Herramienta educativa web para el entrenamiento audioperceptual de la calidad vocal (escala GRBAS), basada en la Perceptual Voice Qualities Database (PVQD, Walden 2022). Calcula acuerdo con el consenso (kappa ponderado, error por parámetro) y corre íntegramente en el navegador. No es un instrumento de diagnóstico clínico."
 type: software
-version: 1.0.0
-doi: 10.5281/zenodo.23549075
-date-released: 2026-10-19
+version: 1.0.1
+doi: 10.5281/zenodo.23549074
+date-released: 2026-10-25
 license: CC-BY-NC-4.0
 repository-code: "https://github.com/patriciafarias2026/grbas-trainer"
 url: "https://patriciafarias2026.github.io/grbas-trainer/"
@@ -34,5 +34,8 @@ references:
     authors:
       - family-names: "Walden"
         given-names: "Patrick R."
-    year: 2020
-    doi: "10.17632/9dz247gnyb.3"
+    year: 2022
+    version: "4"
+    publisher:
+      name: "Mendeley Data"
+    doi: "10.17632/9dz247gnyb.4"
