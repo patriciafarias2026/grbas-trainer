@@ -1,7 +1,7 @@
 {
   "title": "GRBAS Trainer: auditory-perceptual training tool for voice quality",
   "upload_type": "software",
-  "description": "<p>Herramienta educativa web para el entrenamiento audioperceptual de la calidad vocal (escala GRBAS), basada en la Perceptual Voice Qualities Database (PVQD, Walden 2020). Compara las calificaciones del usuario con el consenso de los evaluadores (kappa ponderado, error por parámetro) y corre íntegramente en el navegador. No es un instrumento de diagnóstico clínico. Los audios no están incluidos y deben descargarse de la base PVQD.</p><p>Educational web tool for auditory-perceptual training of voice quality (GRBAS), based on the PVQD. It compares the user's ratings against rater consensus and runs entirely in the browser. Not a clinical diagnostic instrument. Audio files are not included.</p>",
+  "description": "<p>Herramienta educativa web para el entrenamiento audioperceptual de la calidad vocal (escala GRBAS), basada en la Perceptual Voice Qualities Database (PVQD, Walden 2022). Compara las calificaciones del usuario con el consenso de los evaluadores (kappa ponderado, error por parámetro) y corre íntegramente en el navegador. No es un instrumento de diagnóstico clínico. Los audios no están incluidos y deben descargarse de la base PVQD.</p><p>Educational web tool for auditory-perceptual training of voice quality (GRBAS), based on the PVQD. It compares the user's ratings against rater consensus and runs entirely in the browser. Not a clinical diagnostic instrument. Audio files are not included.</p>",
   "creators": [
     { "name": "Farías, Patricia G." }
   ],
@@ -9,7 +9,7 @@
   "access_right": "open",
   "keywords": ["voice", "GRBAS", "auditory-perceptual evaluation", "training", "PVQD"],
   "related_identifiers": [
-    { "identifier": "10.17632/9dz247gnyb.3", "relation": "isDerivedFrom", "scheme": "doi" },
+    { "identifier": "10.17632/9dz247gnyb.4", "relation": "isDerivedFrom", "scheme": "doi" },
     { "identifier": "https://github.com/patriciafarias2026/grbas-trainer", "relation": "isSupplementTo", "scheme": "url" }
   ]
 }
